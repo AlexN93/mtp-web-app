@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MTP App</title>
+
+    <!-- Bootstrap -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/angular-route/angular-route.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi?ext.js"></script>
+	<script src="app.js"></script>
+	<script src="controllers/map.js"></script>
+  	<script src="controllers/pie.js"></script>
+  	<script src="controllers/table.js"></script>
+</head>
+<body ng-app="mtpApp">
+	<header>
+		<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#/">MTP Web App</a>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#/"><i class="fa fa-home"></i>World Map</a></li>
+				<li><a href="#/pie"><i></i>Pie Chart</a></li>
+                <li><a href="#/table"><i></i>Table</a></li>
+			</ul>
+		</div>
+	</header>
+	<div class="container">
+		<div ng-view></div>
+	</div>
+</body>
+</html>
