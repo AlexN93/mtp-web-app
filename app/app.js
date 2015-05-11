@@ -40,7 +40,7 @@ angular.module('mtpApp', [
         var formatDataLogic = function(data) {
             var dataArray = [['Countries', 'Transaction count']];
             for(var i=0; i < data.length; i++) {
-                dataArray.push([data[i]["TransactionOrigin"], parseInt(data[i]["1"])]);
+                dataArray.push([data[i]["TransactionOrigin"], parseInt(data[i]["TransactionCount"])]);
             }
             return dataArray;
         };
