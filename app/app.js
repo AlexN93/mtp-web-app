@@ -71,10 +71,15 @@ angular.module('mtpApp', [
 .factory('SocketService', ["$filter",
     function($filter) {
         var addDataLogic = function(transaction, data) {
+            var flag = 0;
             for(var i=0; i < data.length; i++) {
                 if(transaction["originatingCountry"] == data[i][0]){
                     data[i][1] = parseInt(data[i][1]) + 1;
+                    flag = 1;
                 }
+            }
+            if(flag == 0) {
+                data.push([transaction["originatingCountry"], 1]);
             }
             return data;
         };
